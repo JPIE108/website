@@ -1,8 +1,39 @@
 <html>
-  <title>
-    jpie108.github.io
-    </title>
-      <body>
-        <p>Hello World!</p>
-          </body>
-  </html>
+    <head>
+        <title>
+            Stack Calculator
+        </title>
+        <style>
+        </style>
+        <script>
+            function funny (form){
+                let buttplug = form.poop.value;
+                let puttblug = form.pee.value;
+                let result = Math.floor(puttblug / 64);
+                let remainder = puttblug % 64;  
+                let sent = buttplug + " - " + result + " stack(s) " + remainder + " block(s)\n ";
+                let yeet = document.createTextNode(sent);
+                let pp = document.getElementById("resulted");
+                let node = document.createElement("LI")
+                node.append(yeet);
+                pp.append(node);
+                // This shit doesn't work
+                // pp.appendChild(yeet);
+                // pp.appendChild(document.createElement('LI'));
+                // pp.appendChild(document.createElement('br'));
+            }
+        </script>
+    </head>
+    <body>
+        <p><h1>Stack Calculator</h1></p>
+        <form name="form1" action="" method="get">
+            <p>Block Type:</p>
+            <input type="text" name="poop"></input>
+            <p>Quantity of Blocks</p>
+            <input type="number" name="pee"></input>
+            <input type="button" name="yes" value="Submit" onClick="funny(this.form)")></input>
+        </form>
+            <ul id="resulted">
+                </ul>
+    </body>
+</html>
