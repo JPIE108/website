@@ -1,39 +1,27 @@
 <html>
     <head>
-        <title>
-            Stack Calculator
-        </title>
-        <style>
-        </style>
+        <title>Mr Wong Fun English</title>
         <script>
-            function funny (form){
-                let buttplug = form.poop.value;
-                let puttblug = form.pee.value;
-                let result = Math.floor(puttblug / 64);
-                let remainder = puttblug % 64;  
-                let sent = buttplug + " - " + result + " stack(s) " + remainder + " block(s)\n ";
-                let yeet = document.createTextNode(sent);
+            function test () {
+            let names = ["Cameron", "Rin", "Christopher", "Alessandro", "Annelie", "Anisha", "Mitchell", "Pat", "Red", "Alex", "Jayden", "Josh", "Yoav", "James", "Nina", "Tina", "Margaret", "Sree", "Rohan", "Jasper"];
+            let number = Math.floor(Math.random () * names.length);
+            let remove = true;
+            console.log(names[number]);
+            let yeet = document.createTextNode(names[number]);
                 let pp = document.getElementById("resulted");
                 let node = document.createElement("LI")
                 node.append(yeet);
                 pp.append(node);
-                // This shit doesn't work
-                // pp.appendChild(yeet);
-                // pp.appendChild(document.createElement('LI'));
-                // pp.appendChild(document.createElement('br'));
-            }
+            // document.getElementByID("result");
+        }
+
         </script>
     </head>
-    <body>
-        <p><h1>Stack Calculator</h1></p>
-        <form name="form1" action="" method="get">
-            <p>Block Type:</p>
-            <input type="text" name="poop"></input>
-            <p>Quantity of Blocks</p>
-            <input type="number" name="pee"></input>
-            <input type="button" name="yes" value="Submit" onClick="funny(this.form)")></input>
-        </form>
-            <ul id="resulted">
-                </ul>
-    </body>
-</html>
+        <body>
+        <p><h2>Mr Wong's Student Selector</h2></p>
+        <button onClick="test();">Select a Student</button>
+        <p>History:</p>
+        <ul id="resulted">
+        </ul>
+        </body>
+    </html>
